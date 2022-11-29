@@ -4,7 +4,7 @@
   "description": "Calculator app test for github actions",
   "main": "calculator.js",
   "scripts": {
-    "test": "jest --watchAll",
+    "test": "jest",
     "build": "webpack --progress --mode=development",
     "build:production": "webpack --progress --mode=production"
   },

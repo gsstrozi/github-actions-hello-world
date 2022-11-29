@@ -1,7 +1,13 @@
 name: calculator-github-actions
-on: [push]
+on: 
+  push:
+    paths:
+      - 'calculator/**'
 jobs:
-  build-and-tests:
+  unit-tests:
+    defaults:
+      run:
+        working-directory: calculator
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -10,4 +16,3 @@ jobs:
           node-version: '14'
       - run: npm install
       - run: npm test
-      - run: npm run build
